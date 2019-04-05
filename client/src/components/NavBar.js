@@ -23,7 +23,8 @@ export default class NavBar extends React.Component {
         <div id="logo" className={styles.header}>
           beatport
         </div>
-        <a href="logo" className={styles.tabs}>
+        <a href="genre" className={styles.tabs}>
+          GENRES
           <GenreMenu />
         </a>
         <a href="tracks" className={styles.tabs}>

@@ -38,8 +38,9 @@ export default class GenreMenu extends Component {
     return (
       <div>
         <div onMouseOver={this.showGenres}>
-          GENRES
+          {/* GENRES */}
           <i className="fa fa-caret-down" />
+          <span className={styles.genreBox} />
         </div>
         {this.state.showMenu ? (
           <div
