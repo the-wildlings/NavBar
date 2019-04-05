@@ -2,6 +2,9 @@ import React from 'react';
 import styles from '../header.module.css';
 import GenreMenu from './genreMenu.js';
 import Search from './Search.js';
+import AccountLogin from './AccountLogin.js';
+import Following from './Following.js';
+import Cart from './Cart';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -9,13 +12,13 @@ export default class NavBar extends React.Component {
     this.state = {
       search: ''
     };
-    this.searchValue = this.searchValue.bind(this);
+    // this.searchValue = this.searchValue.bind(this);
   }
-  searchValue(e) {
-    this.setState({
-      search: e.target.value
-    });
-  }
+  // searchValue(e) {
+  //   this.setState({
+  //     search: e.target.value
+  //   });
+  // }
 
   render() {
     return (
@@ -49,13 +52,13 @@ export default class NavBar extends React.Component {
         /> */}
         <Search id="searchBar" />
         <a href="cart" className={styles.userTabs}>
-          cart
+          <Cart />
         </a>
         <a href="following" className={styles.userTabs}>
-          following
+          <Following />
         </a>
         <a href="account" className={styles.userTabs}>
-          account
+          <AccountLogin />
         </a>
       </div>
     );

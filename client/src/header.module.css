@@ -25,6 +25,8 @@ body {
   position: fixed;
   padding: 2px 16px;
   margin: 0;
+  border-bottom: 1px solid #373737;
+
   /* vertical-align: baseline; */
 }
 .header {
@@ -74,14 +76,11 @@ body {
   float: right;
 }
 .genreBox {
-  /* display: flex; */
   position: absolute;
   height: 45px;
   width: 80px;
   left: 100px;
-  border: 1px solid white;
-  /* line-height: 100px; */
-  /* z-index: 3; */
+  /* border: 1px solid white; */
 }
 .menu {
   /* content: ''; */

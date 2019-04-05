@@ -76,7 +76,7 @@ export default class GenreMenu extends Component {
                 </div>
               </li>
             </ul>
-            <div className={styles.genreRow}>
+            <div id="genreList" className={styles.genreRow}>
               <ul className={styles.genreContainer}>
                 <li className={styles.genre}> AFRO HOUSE </li>
                 <li className={styles.genre}> BASS HOUSE </li>
