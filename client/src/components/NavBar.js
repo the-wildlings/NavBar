@@ -1,5 +1,4 @@
 import React from 'react';
-// import styles from '../../dist/button.module.css';
 import styles from '../header.module.css';
 import GenreMenu from './genreMenu.js';
 import Search from './Search.js';
@@ -47,15 +46,15 @@ export default class NavBar extends React.Component {
           className={styles.search}
           onChange={this.searchValue}
         /> */}
-        <Search id="searchBar" className={styles.search} />
-        <a href="account" className={styles.userTabs}>
-          account
+        <Search id="searchBar" />
+        <a href="cart" className={styles.userTabs}>
+          cart
         </a>
         <a href="following" className={styles.userTabs}>
           following
         </a>
-        <a href="cart" className={styles.userTabs}>
-          cart
+        <a href="account" className={styles.userTabs}>
+          account
         </a>
       </div>
     );

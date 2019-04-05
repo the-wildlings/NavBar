@@ -3,21 +3,21 @@ import React from 'react';
 import styles from '../header.module.css';
 import Autosuggest from 'react-autosuggest';
 import theme from '../theme.css';
-import Axios from 'axios';
+import axios from 'axios';
 // Imagine you have a list of languages that you'd like to autosuggest.
-const languages = [
-  {
-    name: 'C',
-    year: 1972
-  },
-  {
-    name: 'Elm',
-    year: 2012
-  },
-  {
-    name: 'elephant'
-  }
-];
+// const languages = [
+//   {
+//     name: 'C',
+//     year: 1972
+//   },
+//   {
+//     name: 'Elm',
+//     year: 2012
+//   },
+//   {
+//     name: 'elephant'
+//   }
+// ];
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
 
@@ -36,6 +36,7 @@ class Search extends React.Component {
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
       value: '',
+      db: [],
       suggestions: []
     };
     this.onChange = this.onChange.bind(this);
@@ -54,14 +55,17 @@ class Search extends React.Component {
     this.fetch();
   }
   fetch() {
-    Axios.get('/api').then(response => {
-      this.setState(
-        {
-          suggestions: response.data
-        },
-        () => console.log(this.state.suggestions)
-      ).catch(err => console.error(err));
-    });
+    axios
+      .get('/api')
+      .then(response =>
+        this.setState(
+          {
+            db: response.data
+          },
+          () => console.log(this.state.db)
+        )
+      )
+      .catch(err => console.error(err));
   }
   onChange(event, { newValue }) {
     this.setState({
@@ -87,20 +91,19 @@ class Search extends React.Component {
     suggestion.title;
   }
 
-  // Use your imagination to render suggestions.
-  renderSuggestion(suggestion) {
-    <div className={styles.search}>{suggestion.title}</div>;
-  }
-
   getSuggestions(value) {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
     return inputLength === 0
       ? []
-      : languages.filter(
-          lang => lang.name.toLowerCase().slice(0, inputLength) === inputValue
+      : this.state.db.filter(
+          data => data.title.toLowerCase().slice(0, inputLength) === inputValue
         );
+  }
+  // Use your imagination to render suggestions.
+  renderSuggestion(suggestion) {
+    return <div>{suggestion.title}</div>;
   }
 
   render() {
@@ -110,7 +113,7 @@ class Search extends React.Component {
     const inputProps = {
       placeholder: 'search',
       value,
-      type: 'search',
+      // type: 'search',
       onChange: this.onChange
     };
 
