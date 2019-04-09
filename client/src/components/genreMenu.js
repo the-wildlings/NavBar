@@ -38,9 +38,9 @@ export default class GenreMenu extends Component {
     return (
       <div>
         <div onMouseOver={this.showGenres}>
-          {/* GENRES */}
-          <i className="fa fa-caret-down" />
           <span className={styles.genreBox} />
+          GENRES
+          <i className="fa fa-caret-down" />
         </div>
         {this.state.showMenu ? (
           <div
@@ -58,9 +58,9 @@ export default class GenreMenu extends Component {
                 </div>
               </li>
               <li className={styles.highlightsGreen}>
-                WINTER MUSIC CONFERENCE
+                PEAK HOUR TRACKS
                 <div className={styles.description}>
-                  Fresh cuts heating up Miami
+                  Tracks to bring down the house
                 </div>
               </li>
               <li className={styles.highlightsBlue}>

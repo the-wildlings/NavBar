@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../header.module.css';
+import styles from '../user.module.css';
 
 export default class Following extends Component {
   constructor(props) {
@@ -37,29 +37,36 @@ export default class Following extends Component {
   render() {
     return (
       <div>
-        <div onMouseOver={this.showFollowing}>Following</div>
+        <div onMouseOver={this.showFollowing}>
+          Following
+          {/* <img src={require('../img/headphones.svg')} /> */}
+          <div className={styles.userBox} />
+        </div>
+
         {this.state.showFollowing ? (
           <div
             id="following"
-            className={styles.menu}
+            className={styles.userMenu}
             ref={element => {
               this.dropdownMenu = element;
             }}
           >
-            <ul>
-              <li>
+            <div className={styles.followingMenu}>
+              <div className={styles.followingMenuText}>
                 View My Beatport
-                <input placeholder="FILTER" />
-              </li>
-              <li>
-                MY ARTISTS
-                <span>View All</span>
-              </li>
-              <li>
-                MY LABELS
-                <span>View All</span>
-              </li>
-            </ul>
+                <input className={styles.filter} placeholder="FILTER" />
+                <div>
+                  MY ARTISTS
+                  <span className={styles.addSpace}>View All</span>
+                </div>
+              </div>
+              <div className={styles.followingMenuText}>
+                <div>
+                  MY LABELS
+                  <span className={styles.addSpace}>View All</span>
+                </div>
+              </div>
+            </div>
           </div>
         ) : null}
       </div>

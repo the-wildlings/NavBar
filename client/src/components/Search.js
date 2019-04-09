@@ -87,7 +87,6 @@ class Search extends React.Component {
       onChange: this.onChange
     };
 
-    // Finally, render it!
     return (
       <Autosuggest
         theme={theme}

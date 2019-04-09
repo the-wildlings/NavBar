@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from '../header.module.css';
+import styles from '../user.module.css';
+import { userInfo } from 'os';
 
 export default class AccountLogin extends Component {
   constructor(props) {
@@ -34,24 +35,29 @@ export default class AccountLogin extends Component {
       );
     }
   }
+
   render() {
     return (
-      <div>
-        <div onMouseOver={this.showAccount}>Account</div>
+      <div onMouseOver={this.showAccount}>
+        <div>
+          Account
+          {/* <img src={require('../img/support.svg')} /> */}
+          <div className={styles.userBox} />
+        </div>
         {this.state.showAccount ? (
           <div
             id="accountLogin"
-            className={styles.menu}
+            className={styles.userMenu}
             ref={element => {
               this.dropdownMenu = element;
             }}
           >
-            <ul>
-              <li>Account Settings</li>
-              <li>My Downloads</li>
-              <li>My Charts</li>
-              <li>Log Out</li>
-            </ul>
+            <div className={styles.accountMenu}>
+              <div className={styles.accountMenuText}>Account Settings</div>
+              <div className={styles.accountMenuText}>My Downloads</div>
+              <div className={styles.accountMenuText}>My Charts</div>
+              <div className={styles.accountMenuText}>Log Out</div>
+            </div>
           </div>
         ) : null}
       </div>

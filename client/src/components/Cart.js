@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import styles from '../header.module.css';
-
+import styles from '../user.module.css';
+import PlusSign from './plusSign.js';
+import FileCabs from './FileCabs.js';
+import Star from './Star.js';
+import Settinglogo from './Settinglogo.js';
 export default class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showCart: false
+      showCart: false,
+      mainCart: [],
+      HoldBin: []
     };
     this.showCart = this.showCart.bind(this);
     this.hideCart = this.hideCart.bind(this);
@@ -37,21 +42,39 @@ export default class Cart extends Component {
   render() {
     return (
       <div>
-        <div onMouseOver={this.showCart}>Cart</div>
+        <div onMouseOver={this.showCart}>
+          Cart
+          {/* <img src={require('../img/shopping-cart.svg')} /> */}
+          <div className={styles.userBox} />
+        </div>
         {this.state.showCart ? (
           <div
             id="cart"
-            className={styles.menu}
+            className={styles.userMenu}
             ref={element => {
               this.dropdownMenu = element;
             }}
           >
-            <ul>
-              <li>MY CARTS SETTING</li>
-              <li>Main Cart*</li>
-              <li>Hold Bin</li>
-              <li>NEW CART</li>
-            </ul>
+            <div className={styles.followingMenu}>
+              <div className={styles.cartMenu}>
+                MY CARTS <Settinglogo />
+              </div>
+              <div className={styles.cartText}>
+                Main Cart <Star />
+                <div className={styles.quantity}>
+                  1 item
+                  <span className={styles.addSpace}>$1.99</span>
+                </div>
+              </div>
+              <div className={styles.cartText}>
+                Hold Bin <FileCabs />
+                <div className={styles.quantity}>0 items</div>
+              </div>
+              <div className={styles.cartText}>
+                <PlusSign />
+                NEW CART
+              </div>
+            </div>
           </div>
         ) : null}
       </div>

@@ -5,6 +5,8 @@ import Search from './Search.js';
 import AccountLogin from './AccountLogin.js';
 import Following from './Following.js';
 import Cart from './Cart';
+// import logo from '../img/Beatport-logo.svg';
+// const logo = require('../img/Beatport-logo.svg');
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -24,10 +26,11 @@ export default class NavBar extends React.Component {
     return (
       <div id="header-container" className={styles.headerContainer}>
         <div id="logo" className={styles.header}>
-          beatport
+          {/* beatport */}
+          <img src={require('../img/Beatport-logo.svg')} />
         </div>
         <a href="genre" className={styles.tabs}>
-          GENRES
+          {/* GENRES */}
           <GenreMenu />
         </a>
         <a href="tracks" className={styles.tabs}>
@@ -45,21 +48,18 @@ export default class NavBar extends React.Component {
         <a href="sounds" className={styles.tabs}>
           SOUNDS
         </a>
-        {/* <input
-          id="searchBar"
-          className={styles.search}
-          onChange={this.searchValue}
-        /> */}
         <Search id="searchBar" />
-        <a href="cart" className={styles.userTabs}>
-          <Cart />
-        </a>
-        <a href="following" className={styles.userTabs}>
-          <Following />
-        </a>
-        <a href="account" className={styles.userTabs}>
-          <AccountLogin />
-        </a>
+        <div className={styles.userContainer}>
+          <a href="account" className={styles.userTabs}>
+            <AccountLogin />
+          </a>
+          <a /*href="following"*/ className={styles.userTabs}>
+            <Following />
+          </a>
+          <a href="cart" className={styles.userTabs}>
+            <Cart />
+          </a>
+        </div>
       </div>
     );
   }

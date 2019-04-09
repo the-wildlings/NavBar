@@ -19,7 +19,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         loader: combinedLoaders([
           {
             loader: 'style-loader'
@@ -32,10 +32,14 @@ module.exports = {
             }
           }
         ])
+      },
+      {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg|otf)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.scss']
   }
 };
