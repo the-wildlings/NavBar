@@ -97,8 +97,11 @@ body {
   /* margin-left: 100px; */
   cursor: pointer;
   text-decoration: none;
-  /* border: 2px solid white; */
+  height: 26px;
+  /* border: 1px solid white; */
   /* float: right; */
+  display: flex;
+  align-items: center;
 }
 a.userTabs:hover {
   background-color: #94d500;

@@ -1,6 +1,6 @@
 // import ReactAutoSuggestDropdown from 'react-autosuggest-dropdown-menu';
 import React from 'react';
-import styles from '../header.module.css';
+// import styles from '../header.module.css';
 import Autosuggest from 'react-autosuggest';
 import theme from '../theme.css';
 import axios from 'axios';
@@ -69,19 +69,34 @@ class Search extends React.Component {
     return inputLength === 0
       ? []
       : this.state.db.filter(
-          data => data.title.toLowerCase().slice(0, inputLength) === inputValue
+          data =>
+            data.title.toLowerCase().slice(0, inputLength) === inputValue ||
+            data.artist.toLowerCase().slice(0, inputLength) === inputValue ||
+            data.album.toLowerCase().slice(0, inputLength) === inputValue
         );
   }
 
   renderSuggestion(suggestion) {
-    return <div>{suggestion.title}</div>;
+    console.log(suggestion.artist); //need to deal with suggesting duplicate artist name
+    //if none of the letter matches at first see if the word is included in any of the words in the db.
+    let artist = {};
+    // if (!artist[suggestion.artist]) {
+    //   artist[suggestion.artist] = suggestion.artist;
+    //   return <div>{artist[suggestion.artist]}</div>;
+    // }
+
+    return (
+      <div>{suggestion.title}</div> || <div>{suggestion.artist}</div> || (
+        <div>{suggestion.album}</div>
+      )
+    );
   }
 
   render() {
     const { value, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: 'search',
+      placeholder: 'Search...',
       value,
       type: 'search',
       onChange: this.onChange

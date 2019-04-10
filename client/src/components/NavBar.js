@@ -48,6 +48,8 @@ export default class NavBar extends React.Component {
         <a href="sounds" className={styles.tabs}>
           SOUNDS
         </a>
+        {/* <img src={}/> */}
+        <div className="searchIcon" />
         <Search id="searchBar" />
         <div className={styles.userContainer}>
           <a href="account" className={styles.userTabs}>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from '../user.module.css';
+import FollowingIcon from './FollowingIcon.js';
 
 export default class Following extends Component {
   constructor(props) {
@@ -38,8 +39,11 @@ export default class Following extends Component {
     return (
       <div>
         <div onMouseOver={this.showFollowing}>
-          Following
+          {/* Following */}
           {/* <img src={require('../img/headphones.svg')} /> */}
+          <div className={styles.followingIcon}>
+            <FollowingIcon />
+          </div>
           <div className={styles.userBox} />
         </div>
 
@@ -52,8 +56,8 @@ export default class Following extends Component {
             }}
           >
             <div className={styles.followingMenu}>
+              <div className={styles.viewMyBeatPort}>View My Beatport</div>
               <div className={styles.followingMenuText}>
-                View My Beatport
                 <input className={styles.filter} placeholder="FILTER" />
                 <div>
                   MY ARTISTS

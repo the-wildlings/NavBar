@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../user.module.css';
 import { userInfo } from 'os';
+import HeadphoneMan from './HeadphoneMan.js';
 
 export default class AccountLogin extends Component {
   constructor(props) {
@@ -39,9 +40,15 @@ export default class AccountLogin extends Component {
   render() {
     return (
       <div onMouseOver={this.showAccount}>
-        <div>
-          Account
-          {/* <img src={require('../img/support.svg')} /> */}
+        <div className={styles.headphoneMan}>
+          {/* Account */}
+          {/* <img
+            width="20"
+            height="20"
+            className={styles.man}
+            src={require('../img/headphoneman.png')}
+          /> */}
+          <HeadphoneMan />
           <div className={styles.userBox} />
         </div>
         {this.state.showAccount ? (

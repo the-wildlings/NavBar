@@ -4,6 +4,7 @@ import PlusSign from './plusSign.js';
 import FileCabs from './FileCabs.js';
 import Star from './Star.js';
 import Settinglogo from './Settinglogo.js';
+import ShoppingCart from './ShoppingCartSVG.js';
 export default class Cart extends Component {
   constructor(props) {
     super(props);
@@ -43,8 +44,11 @@ export default class Cart extends Component {
     return (
       <div>
         <div onMouseOver={this.showCart}>
-          Cart
+          {/* Cart */}
           {/* <img src={require('../img/shopping-cart.svg')} /> */}
+          <div className={styles.cartImg}>
+            <ShoppingCart />
+          </div>
           <div className={styles.userBox} />
         </div>
         {this.state.showCart ? (
@@ -55,8 +59,8 @@ export default class Cart extends Component {
               this.dropdownMenu = element;
             }}
           >
-            <div className={styles.followingMenu}>
-              <div className={styles.cartMenu}>
+            <div className={styles.cartMenu}>
+              <div className={styles.myCart}>
                 MY CARTS <Settinglogo />
               </div>
               <div className={styles.cartText}>
