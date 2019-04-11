@@ -16,9 +16,9 @@ const navbarSchema = mongoose.Schema({
   released: String,
   genre: String,
   // BPM: Number,
-  Key: String,
-  Label: String,
-  Remixers: String
+  key: String,
+  label: String,
+  remixers: String
 });
 
 const Navbar = mongoose.model('Navbar', navbarSchema);

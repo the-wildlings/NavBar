@@ -112,6 +112,9 @@ class Filter extends React.Component {
     super(props);
     this.state = {
       db: [],
+      store: [],
+      label: [],
+      storeLabel: [],
       value: '',
       id: 1
     };
@@ -131,33 +134,34 @@ class Filter extends React.Component {
     this.fetch();
   }
   fetch() {
-    // (async () => {
-    // let id = 1;
-    //   for (let i = 1; i <= 5; i++) {
-    //     id = Math.floor(Math.random() * 10) + 1;
-    //     await
-
     axios
       .get(`/api`)
       .then(response => {
-        let arr = [];
-        response.data.forEach(item => arr.push(item.artist));
-        let arr2 = new Set([arr]);
-        // arr.push(response.data);
-        console.log([...new Set(arr)]);
-        // let arr2 = new Set([arr]);
-        // let result = [];
-        // for (let i = 0; i < 5; i++) {
-        //   let randomIndex = Math.floor(Math.random() * 10) + 1;
-        //   result.push(arr[randomIndex]);
-        // }
+        let artist = [];
+        let label = [];
+        response.data.forEach(item => {
+          artist.push(item.artist);
+          label.push(item.label);
+        });
+
+        let uniqueArtistList = [...new Set(artist)];
+        let uniqueLabelList = [...new Set(label)];
+
+        let resultArtist = [];
+        let resultLabel = [];
+        for (let i = 0; i < 5; i++) {
+          let randomIndex = Math.floor(Math.random() * 5) + 1;
+          resultArtist.push([...new Set(uniqueArtistList)][randomIndex]);
+          resultLabel.push([...new Set(uniqueLabelList)][randomIndex]);
+        }
         this.setState({
-          db: [...new Set(arr)]
+          db: [...new Set(resultArtist)],
+          store: [...new Set(resultArtist)],
+          label: [...new Set(resultLabel)],
+          storeLabel: [...new Set(resultLabel)]
         });
       })
       .catch(err => console.error(err));
-    //   }
-    // })();
   }
 
   filterDb(e) {
@@ -172,7 +176,9 @@ class Filter extends React.Component {
         () => console.log(string)
       );
     } else {
-      this.fetch();
+      this.setState({
+        db: this.state.store
+      });
     }
   }
   // response.data.filter(item => {
@@ -201,6 +207,15 @@ class Filter extends React.Component {
         <div className={styles.artist}>
           {this.state.db.map(artist => (
             <div>{artist}</div>
+          ))}
+        </div>
+        <div className={styles.artistAndLabels}>
+          MY LABELS
+          <span className={styles.addSpace}>View All</span>
+        </div>
+        <div className={styles.artist}>
+          {this.state.label.map(label => (
+            <div>{label}</div>
           ))}
         </div>
       </div>

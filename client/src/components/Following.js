@@ -66,12 +66,12 @@ export default class Following extends Component {
                   <span className={styles.addSpace}>View All</span>
                 </div> */}
               </div>
-              <div className={styles.followingMenuText}>
+              {/* <div className={styles.followingMenuText}>
                 <div className={styles.artistAndLabels}>
                   MY LABELS
                   <span className={styles.addSpace}>View All</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         ) : null}
