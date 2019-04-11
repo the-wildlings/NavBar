@@ -79,7 +79,7 @@ div.cartText:hover {
 }
 
 .followingMenuText {
-  border-bottom: 3px solid rgba(155, 155, 155, 0.2);
+  /* border-bottom: 3px solid rgba(155, 155, 155, 0.2); */
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -88,6 +88,14 @@ div.cartText:hover {
   padding: 12px 15px;
   margin: 5px;
   box-sizing: border-box;
+}
+.artistAndLabels {
+  border-bottom: 2px solid rgba(155, 155, 155, 0.2);
+  padding-bottom: 10px;
+}
+
+.artist {
+  padding-top: 10px;
 }
 .viewMyBeatPort {
   width: 300px;
@@ -99,7 +107,9 @@ div.cartText:hover {
   margin-top: 0px;
   margin-bottom: 20px;
   height: 20px;
-  outline: none;
+  width: 270px;
+  outline-color: #94d500;
+  /* outline: none; */
   overflow: auto;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -172,5 +182,5 @@ div.cartText:hover {
   width: 25px;
   height: 25px;
   fill: white;
-  stroke: white;
+  /* stroke: white; */
 }

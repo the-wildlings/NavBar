@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../user.module.css';
 import FollowingIcon from './FollowingIcon.js';
+import FilterArtist from './FilterArtist.js';
 
 export default class Following extends Component {
   constructor(props) {
@@ -58,14 +59,15 @@ export default class Following extends Component {
             <div className={styles.followingMenu}>
               <div className={styles.viewMyBeatPort}>View My Beatport</div>
               <div className={styles.followingMenuText}>
-                <input className={styles.filter} placeholder="FILTER" />
-                <div>
+                {/* <input className={styles.filter} placeholder="FILTER" /> */}
+                <FilterArtist />
+                {/* <div>
                   MY ARTISTS
                   <span className={styles.addSpace}>View All</span>
-                </div>
+                </div> */}
               </div>
               <div className={styles.followingMenuText}>
-                <div>
+                <div className={styles.artistAndLabels}>
                   MY LABELS
                   <span className={styles.addSpace}>View All</span>
                 </div>

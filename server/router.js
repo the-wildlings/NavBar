@@ -5,8 +5,10 @@ router
   .route('/')
   .get(controller.get)
   .post(controller.post);
+
 router
-  .route('/:_id')
+  .route('/:id')
+  .get(controller.getOne)
   .delete(controller.delete)
   .put(controller.put);
 

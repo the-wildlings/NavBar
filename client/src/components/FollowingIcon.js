@@ -14,9 +14,9 @@ const FollowingIcon = props => {
       <g
         id="providers-list"
         stroke="none"
-        stroke-width="1"
+        // stroke-width="1"
         fill="none"
-        fill-rule="evenodd"
+        // fill-rule="evenodd"
       >
         <g id="beatport">
           <rect

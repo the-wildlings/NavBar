@@ -4,6 +4,8 @@ import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import theme from '../theme.css';
 import axios from 'axios';
+import styles from '../search.css';
+import Mag from './magnifierImg.js';
 
 class Search extends React.Component {
   constructor() {
@@ -12,6 +14,7 @@ class Search extends React.Component {
       value: '',
       db: [],
       suggestions: []
+      // artist: []
     };
     this.onChange = this.onChange.bind(this);
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(
@@ -23,6 +26,7 @@ class Search extends React.Component {
     this.getSuggestionValue = this.getSuggestionValue.bind(this);
     this.renderSuggestion = this.renderSuggestion.bind(this);
     this.getSuggestions = this.getSuggestions.bind(this);
+    this.renderInputComponent = this.renderInputComponent.bind(this);
     this.fetch = this.fetch.bind(this);
   }
   componentDidMount() {
@@ -48,18 +52,23 @@ class Search extends React.Component {
   }
 
   onSuggestionsFetchRequested({ value }) {
-    this.setState({
-      suggestions: this.getSuggestions(value)
-    });
+    this.setState(
+      {
+        suggestions: this.getSuggestions(value)
+      },
+      () => console.log(this.state.artist)
+    );
   }
 
   onSuggestionsClearRequested() {
     this.setState({
-      suggestions: []
+      suggestions: [],
+      artist: []
     });
   }
   getSuggestionValue(suggestion) {
     suggestion.title;
+    // suggestion;
   }
 
   getSuggestions(value) {
@@ -77,18 +86,38 @@ class Search extends React.Component {
   }
 
   renderSuggestion(suggestion) {
-    console.log(suggestion.artist); //need to deal with suggesting duplicate artist name
+    console.log(suggestion); //need to deal with suggesting duplicate artist name
     //if none of the letter matches at first see if the word is included in any of the words in the db.
-    let artist = {};
-    // if (!artist[suggestion.artist]) {
-    //   artist[suggestion.artist] = suggestion.artist;
-    //   return <div>{artist[suggestion.artist]}</div>;
+    // let artist = [];
+    // if (!artist.includes(suggestion.artist)) {
+    // artist[suggestion.artist] = suggestion.artist;
+    //   artist.push(suggestion.artist);
+    // }
+    // if (!this.state.artist.includes(suggestion.artist)) {
+    //   this.setState({
+    //     artist: this.state.artist.push(suggestion.artist)
+    //   });
     // }
 
     return (
-      <div>{suggestion.title}</div> || <div>{suggestion.artist}</div> || (
-        <div>{suggestion.album}</div>
-      )
+      <div>
+        <div className={styles.suggestion}>{suggestion.title}</div>
+        {/* <div className={styles.suggestion}>{suggestion.artist}</div> */}
+        {/* <div className={styles.suggestion}>{suggestion.album}</div> */}
+      </div>
+      // this.state.artist.map(artist => {
+      //   <div>{artist}</div>;
+      // })
+    );
+  }
+  renderInputComponent(inputProps) {
+    return (
+      <div className={theme.inputContainer}>
+        <div className={theme.icon}>
+          <Mag />
+        </div>
+        <input {...inputProps} />
+      </div>
     );
   }
 
@@ -111,6 +140,7 @@ class Search extends React.Component {
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
+        renderInputComponent={this.renderInputComponent}
       />
     );
   }
