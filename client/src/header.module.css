@@ -6,7 +6,7 @@ body {
   background-color: #262626;
   margin: 0;
   width: 100vw;
-  max-width: 1440px;
+  max-width: 1350px;
   /* display: flex; */
   /* align-items: center; */
   /* vertical-align: middle; */
@@ -85,21 +85,15 @@ body {
   display: flex;
 }
 .userTabs {
-  /* display: flex; */
   font: 400 13px CoreSans, Arial, sans-serif;
   border: none;
   outline: none;
   color: #ffff;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
-  /* margin-right: 10px; */
-  /* margin-left: 100px; */
   cursor: pointer;
   text-decoration: none;
-  height: 26px;
-  /* border: 1px solid white; */
-  /* float: right; */
+  height: 34px;
   display: flex;
   align-items: center;
 }
@@ -107,9 +101,37 @@ a.userTabs:hover {
   background-color: #94d500;
 }
 
+.userCart {
+  font: 400 13px CoreSans, Arial, sans-serif;
+  border: none;
+  outline: none;
+  color: #ffff;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+a.userCart:hover {
+  background-color: #ff53a0;
+}
+.cartPrice {
+  /* right: 0px; */
+  color: #ff53a0;
+  /* border: 1px solid white; */
+  font: 600 13px CoreSans, Arial, sans-serif;
+  padding: 14px 3px;
+}
+a.userCart:hover > div.cartPrice {
+  color: #ffff;
+}
+
 .genreBox {
   position: absolute;
-  /* display: flex; */
+  display: flex;
   /* justify-content: flex-end; */
   align-self: baseline;
   vertical-align: middle;
@@ -125,15 +147,15 @@ a.userTabs:hover {
   /* content: ''; */
   position: absolute;
   height: auto;
-  width: 80vw;
-  max-width: 1440px;
-  top: 45px;
-  right: 8vw;
-  margin-left: -8.5vw;
+  width: auto;
+  max-width: 1350;
+  top: 52px;
+  /* right: 8vw; */
+  /* margin-left: -8.5vw; */
   /* right: 5rem; */
   /* margin-right: 10em; */
   /* right: 0px; */
-  display: flex;
+  display: block;
   /* align-items: center;
   vertical-align: center;
   justify-content: center; */
@@ -154,10 +176,18 @@ a.userTabs:hover {
   /* align-items: flex-start; */
 }
 
+.genreMenu {
+  width: auto;
+  position: absolute;
+  display: block;
+  left: -220px;
+  background-color: #191919;
+  border: 1px solid #373737;
+}
 .highlightContainer {
   /* height: 10px; */
   width: 100vw;
-  max-width: 1440px;
+  max-width: 1350px;
   /* margin: 0; */
   /* right: 20px; */
   display: flex;
@@ -205,7 +235,7 @@ a.userTabs:hover {
   color: #ffff;
   padding-bottom: 5px;
   line-height: 22px;
-  width: 15.5vw;
+  width: 13.5vw;
   border-bottom: 1px solid rgba(155, 155, 155, 0.2);
 }
 .genreContainer {
@@ -223,7 +253,7 @@ a.userTabs:hover {
 .genreRow {
   height: inherit;
   width: 100vw;
-  max-width: 1440px;
+  max-width: 1350px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -258,7 +288,7 @@ a.userTabs:hover {
   /* left: 10px; */
 
   line-height: 15px;
-  width: 15.5vw;
+  width: 13.5vw;
   border-bottom: 1px solid rgba(155, 155, 155, 0.2);
 }
 

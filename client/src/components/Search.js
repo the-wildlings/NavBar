@@ -1,10 +1,7 @@
-// import ReactAutoSuggestDropdown from 'react-autosuggest-dropdown-menu';
 import React from 'react';
-// import styles from '../header.module.css';
 import Autosuggest from 'react-autosuggest';
 import theme from '../theme.css';
 import axios from 'axios';
-import styles from '../search.css';
 import Mag from './magnifierImg.js';
 
 class Search extends React.Component {
@@ -101,9 +98,9 @@ class Search extends React.Component {
 
     return (
       <div>
-        <div className={styles.suggestion}>{suggestion.title}</div>
-        {/* <div className={styles.suggestion}>{suggestion.artist}</div> */}
-        {/* <div className={styles.suggestion}>{suggestion.album}</div> */}
+        <div>{suggestion.title}</div>
+        {/* <div >{suggestion.artist}</div> */}
+        {/* <div >{suggestion.album}</div> */}
       </div>
       // this.state.artist.map(artist => {
       //   <div>{artist}</div>;

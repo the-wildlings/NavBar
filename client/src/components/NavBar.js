@@ -14,13 +14,7 @@ export default class NavBar extends React.Component {
     this.state = {
       search: ''
     };
-    // this.searchValue = this.searchValue.bind(this);
   }
-  // searchValue(e) {
-  //   this.setState({
-  //     search: e.target.value
-  //   });
-  // }
 
   render() {
     return (
@@ -58,8 +52,9 @@ export default class NavBar extends React.Component {
           <a /*href="following"*/ className={styles.userTabs}>
             <Following />
           </a>
-          <a href="cart" className={styles.userTabs}>
+          <a href="cart" className={styles.userCart}>
             <Cart />
+            <div className={styles.cartPrice}>1/1.49</div>
           </a>
         </div>
       </div>
