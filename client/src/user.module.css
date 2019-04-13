@@ -153,6 +153,7 @@ div.cartText:hover {
   width: 25px;
   height: 25px;
   padding: 6px;
+  position: relative;
   fill: rgb(138, 138, 138);
   background-color: rgb(70, 70, 70);
 }

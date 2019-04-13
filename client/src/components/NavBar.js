@@ -126,7 +126,7 @@ export default class NavBar extends React.Component {
             </header>
             <div className="contentContainer">
               {/* <p>NEW CART</p> */}
-              <form>
+              <form className={styles.modalForm}>
                 <p>NAME</p>
                 <p>
                   <input

@@ -1,11 +1,13 @@
-/* #navbar {
-  background-color: black;
-  /* font: 400 13px CoreSans, Arial, sans-serif; */
-/* } */
+#nav {
+  /* background-color: black;
+  font: 400 13px CoreSans, Arial, sans-serif; */
+  margin: 0;
+  width: 1350px;
+}
 
 body {
   background-color: #262626;
-  margin: 0;
+  margin-left: 0;
 }
 
 .headerContainer {
@@ -21,7 +23,7 @@ body {
   /* max-width: 1440px; */
   position: fixed;
   /* padding: 2px 16px; */
-  margin: auto;
+  margin: 0 auto;
   border-bottom: 1px solid #373737;
   top: 0;
 
@@ -89,7 +91,7 @@ body {
   background-color: inherit;
   cursor: pointer;
   text-decoration: none;
-  height: 34px;
+  /* height: 34px; */
   display: flex;
   align-items: center;
 }
@@ -107,7 +109,7 @@ a.userTabs:hover {
   font-family: inherit;
   cursor: pointer;
   text-decoration: none;
-  height: 34px;
+  /* height: 34px; */
   display: flex;
   align-items: center;
 }
@@ -312,21 +314,28 @@ ul li.genre:hover {
 .modalContent {
   background-color: #262626;
   margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  height: 200px;
-  width: 400px;
+  /* border: 1px solid #888; */
+  height: 40vh;
+  width: 45vw;
   font: 13px;
+  /* padding: 20px; */
+  color: #8c8c8c;
+  /* margin: 0; */
 }
-
-.modalInput {
-  /* margin-top: -100px; */
-  width: 400px;
-}
-
 .modalHeader {
   display: flex;
   justify-content: space-between;
-  color: grey;
-  /* background-color */
+  background-color: #373737;
+  box-sizing: border-box;
+  font-size: 10px;
+  padding-left: 15px;
+  vertical-align: baseline;
+}
+.modalForm {
+  padding: 15px;
+  box-sizing: border-box;
+}
+.modalInput {
+  /* margin-top: -100px; */
+  width: 425px;
 }
