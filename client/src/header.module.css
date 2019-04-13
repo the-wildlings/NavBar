@@ -1,10 +1,3 @@
-#nav {
-  /* background-color: black;
-  font: 400 13px CoreSans, Arial, sans-serif; */
-  margin: 0;
-  width: 1350px;
-}
-
 body {
   background-color: #262626;
   margin-left: 0;
@@ -18,7 +11,7 @@ body {
   background-color: black;
   font: 600 1.2em/55px CoreSans, Arial, sans-serif;
   flex-wrap: wrap;
-  height: auto;
+  /* height: auto; */
   width: 100vw;
   /* max-width: 1440px; */
   position: fixed;
@@ -50,7 +43,6 @@ body {
   /* font-size: 16px; */
   display: flex;
   font: 400 13px CoreSans, Arial, sans-serif;
-  /* border: 1px solid white; */
   outline: none;
   color: #ffff;
   padding: 14px 16px;
@@ -84,7 +76,7 @@ body {
 }
 .userTabs {
   font: 400 13px CoreSans, Arial, sans-serif;
-  border: none;
+  /* border: 1px solid white; */
   outline: none;
   color: #ffff;
   padding: 14px 16px;
@@ -148,7 +140,7 @@ a.userCart:hover > div.cartPrice {
   height: auto;
   width: auto;
   max-width: 1350;
-  top: 52px;
+  top: 60px;
   /* right: 8vw; */
   /* margin-left: -8.5vw; */
   /* right: 5rem; */
@@ -176,7 +168,7 @@ a.userCart:hover > div.cartPrice {
 }
 
 .genreMenu {
-  width: auto;
+  width: 80vw;
   position: absolute;
   /* display: block; */
   left: -220px;

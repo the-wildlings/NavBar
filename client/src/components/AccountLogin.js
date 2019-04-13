@@ -49,8 +49,8 @@ export default class AccountLogin extends Component {
             src={require('../img/headphoneman.png')}
           /> */}
           <HeadphoneMan />
-          <div className={styles.userBox} />
         </div>
+        <div className={styles.userBox} />
         {this.state.showAccount ? (
           <div
             id="accountLogin"
