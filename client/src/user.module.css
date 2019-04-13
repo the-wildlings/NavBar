@@ -14,10 +14,10 @@
 
 .userBox {
   position: absolute;
-  border: 5px solid white;
+  border: 5px transparent;
   align-self: baseline;
   height: 50px;
-  width: 45px;
+  width: 80px;
   top: 10px;
   /* border: 1px solid white; */
 }

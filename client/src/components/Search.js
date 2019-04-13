@@ -36,8 +36,8 @@ class Search extends React.Component {
         this.setState(
           {
             db: response.data
-          },
-          () => console.log(this.state.db)
+          }
+          // () => console.log(this.state.db)
         )
       )
       .catch(err => console.error(err));
@@ -49,12 +49,9 @@ class Search extends React.Component {
   }
 
   onSuggestionsFetchRequested({ value }) {
-    this.setState(
-      {
-        suggestions: this.getSuggestions(value)
-      },
-      () => console.log(this.state.artist)
-    );
+    this.setState({
+      suggestions: this.getSuggestions(value)
+    });
   }
 
   onSuggestionsClearRequested() {
@@ -82,7 +79,7 @@ class Search extends React.Component {
   }
 
   renderSuggestion(suggestion) {
-    console.log(suggestion); //need to deal with suggesting duplicate artist name
+    // console.log(suggestion); //need to deal with suggesting duplicate artist name
     //if none of the letter matches at first see if the word is included in any of the words in the db.
     // let artist = [];
     // if (!artist.includes(suggestion.artist)) {

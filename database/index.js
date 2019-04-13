@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect('mongodb://localhost/navbar', { useNewUrlParser: true })
+  .connect('mongodb://localhost/airbnbeats', { useNewUrlParser: true })
   .then(() => console.log('DB CONNECTED'))
   .catch(err => console.error(err));
 

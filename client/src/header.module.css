@@ -1,16 +1,11 @@
 /* #navbar {
   background-color: black;
-   font: 400 13px CoreSans, Arial, sans-serif;
-} */
+  /* font: 400 13px CoreSans, Arial, sans-serif; */
+/* } */
+
 body {
   background-color: #262626;
   margin: 0;
-  width: 100vw;
-  max-width: 1350px;
-  /* display: flex; */
-  /* align-items: center; */
-  /* vertical-align: middle; */
-  /* justify-content: center; */
 }
 
 .headerContainer {
@@ -319,12 +314,19 @@ ul li.genre:hover {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  height: 250px;
-  width: 500px;
+  height: 200px;
+  width: 400px;
   font: 13px;
 }
 
 .modalInput {
   /* margin-top: -100px; */
-  width: 500px;
+  width: 400px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+  /* background-color */
 }

@@ -15,7 +15,8 @@ export default class NavBar extends React.Component {
       search: '',
       modal: false,
       value: '',
-      carts: ['Test']
+      carts: ['Test'],
+      itemInCart: props.mainCart
     };
     this.handleAddClick = this.handleAddClick.bind(this);
     this.modalStay = this.modalStay.bind(this);
@@ -31,39 +32,36 @@ export default class NavBar extends React.Component {
   }
   modalStay(e) {
     e.preventDefault;
-    this.setState(
-      {
-        modal: true
-      },
-      console.log(this.state.modal)
-    );
+    this.setState({
+      modal: true
+    });
   }
   handleChange(e) {
-    this.setState(
-      {
-        value: e.target.value
-      },
-      () => console.log(this.state.value)
-    );
+    this.setState({
+      value: e.target.value
+    });
   }
 
   handleSave(e) {
     if (this.state.value.length) {
       let newCart = this.state.carts;
       newCart.push(this.state.value);
-      console.log(Array.isArray(this.state.carts));
-      this.setState(
-        {
-          carts: newCart,
-          modal: !this.state.modal
-        },
-        () => console.log(this.state.carts)
-      );
+      this.setState({
+        carts: newCart,
+        modal: !this.state.modal
+      });
     } else {
       this.setState({
         modal: !this.state.modal
       });
     }
+  }
+
+  handleCartAdd(e) {
+    e.preventDefault;
+    this.setState({
+      itemInCart: adf
+    });
   }
 
   render() {
@@ -110,31 +108,39 @@ export default class NavBar extends React.Component {
               <Cart
                 handleAddClick={this.handleAddClick}
                 carts={this.state.carts}
+                handleCartAdd={this.handleCartAdd}
               />
-              <div className={styles.cartPrice}>1 / $1.49</div>
+              <div className={styles.cartPrice}>2 / $2.98</div>
             </a>
           </div>
         </div>
         <div style={style} className={styles.newCartPopUp}>
           <div className={styles.modalContent}>
-            <header className="modalHeader">
-              <h2>NEW CART</h2>
-              <span className="close" onClick={this.handleAddClick}>
-                &times;
-              </span>
+            <header className={styles.modalHeader}>
+              <h2>
+                NEW CART{' '}
+                <span className="close" onClick={this.handleAddClick}>
+                  &times;
+                </span>
+              </h2>
             </header>
             <div className="contentContainer">
               {/* <p>NEW CART</p> */}
-              <p>NAME</p>
-              <p>
-                <input
-                  className={styles.modalInput}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>Set as default cart</p>
-              <button onClick={this.handleSave}>SAVE CHANGES</button>
-              <button onClick={this.handleAddClick}>CANCEL</button>
+              <form>
+                <p>NAME</p>
+                <p>
+                  <input
+                    className={styles.modalInput}
+                    onChange={this.handleChange}
+                  />
+                </p>
+                <p>
+                  <input type="checkbox" />
+                  Set as default cart
+                </p>
+                <button onClick={this.handleSave}>SAVE CHANGES</button>
+                <button onClick={this.handleAddClick}>CANCEL</button>
+              </form>
             </div>
           </div>
         </div>
