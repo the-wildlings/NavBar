@@ -75,10 +75,9 @@ class Search extends React.Component {
     return inputLength === 0
       ? []
       : this.state.db.filter(
-          data =>
-            data.title.toLowerCase().slice(0, inputLength) === inputValue ||
-            data.artist.toLowerCase().slice(0, inputLength) === inputValue ||
-            data.album.toLowerCase().slice(0, inputLength) === inputValue
+          data => data.title.toLowerCase().slice(0, inputLength) === inputValue //||
+          // data.artist.toLowerCase().slice(0, inputLength) === inputValue ||
+          // data.album.toLowerCase().slice(0, inputLength) === inputValue
         );
   }
 

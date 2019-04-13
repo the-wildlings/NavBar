@@ -5,16 +5,27 @@ import FileCabs from './FileCabs.js';
 import Star from './Star.js';
 import Settinglogo from './Settinglogo.js';
 import ShoppingCart from './ShoppingCartSVG.js';
+import NewCart from './NewCart.js';
 export default class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showCart: false,
       mainCart: [],
-      HoldBin: []
+      HoldBin: [],
+      items: [],
+      carts: props.carts,
+      price: 0
     };
+    console.log(this.state.carts);
     this.showCart = this.showCart.bind(this);
     this.hideCart = this.hideCart.bind(this);
+    this.inputNewCart = this.inputNewCart.bind(this);
+  }
+  componentDidMount() {
+    this.setState({
+      items: [{ 1: 'songInfo', price: 1.49 }, { 2: 'songInfo', price: 1.49 }]
+    });
   }
   showCart(e) {
     e.preventDefault();
@@ -40,6 +51,14 @@ export default class Cart extends Component {
       );
     }
   }
+
+  inputNewCart(e) {
+    let newCart = this.state.cart.push({ name: e.target.value });
+    this.setState({
+      cart: newCart
+    });
+  }
+
   render() {
     return (
       <div>
@@ -66,15 +85,37 @@ export default class Cart extends Component {
               <div className={styles.cartText}>
                 Main Cart <Star />
                 <div className={styles.quantity}>
-                  1 item
-                  <span className={styles.addSpace}>$1.99</span>
+                  {this.state.items.length} item
+                  <span className={styles.addSpace}>
+                    {this.state.items
+                      .map(item => item.price)
+                      .reduce((a, b) => a + b)}
+                  </span>
                 </div>
               </div>
               <div className={styles.cartText}>
                 Hold Bin <FileCabs />
-                <div className={styles.quantity}>0 items</div>
+                <div className={styles.quantity}>
+                  {this.state.HoldBin.length} items
+                </div>
               </div>
-              <div className={styles.cartText}>
+
+              {this.state.carts.map(cart => (
+                // console.log(cart);
+                <div className={styles.newCart}>
+                  <div className={styles.cartText}>
+                    {cart}
+                    <span className={styles.addSpace}>0</span>
+                    <div className={styles.quantity}> 0 items</div>
+                  </div>
+                </div>
+              ))}
+
+              {/* <NewCart /> */}
+              <div
+                className={styles.cartText}
+                onClick={e => this.props.handleAddClick(e)}
+              >
                 <PlusSign />
                 NEW CART
               </div>

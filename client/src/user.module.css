@@ -11,26 +11,10 @@
   background-color: #191919;
   z-index: 1;
 }
-/* .userTabs { */
-/* display: flex; */
-/* font: 400 13px CoreSans, Arial, sans-serif; */
-/* border: none; */
-/* outline: none;
-  color: #ffff;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; */
-/* margin-right: 10px; */
-/* margin-left: 100px; */
-/* cursor: pointer;
-  text-decoration: none; */
-/* border: 2px solid white; */
-/* float: right; */
-/* } */
 
 .userBox {
   position: absolute;
-  border: 5px transparent;
+  border: 5px solid white;
   align-self: baseline;
   height: 50px;
   width: 45px;
@@ -142,6 +126,7 @@ div.cartText:hover {
   padding: 12px 15px;
   margin: 5px;
 }
+
 .myCart > svg {
   fill: grey;
   padding-left: 15px;

@@ -77,8 +77,8 @@ export default class GenreMenu extends Component {
                   </div>
                 </li>
               </ul>
-              <div id="genreList" className={styles.genreRow}>
-                <ul className={styles.genreContainer}>
+              <div id="genreList" className={styles.genreContainer}>
+                <ul className={styles.genreCol}>
                   <li className={styles.genre}> AFRO HOUSE </li>
                   <li className={styles.genre}> BASS HOUSE </li>
                   <li className={styles.genre}> BIG ROOM </li>
@@ -88,7 +88,7 @@ export default class GenreMenu extends Component {
                   <li className={styles.genre}> DEEP HOUSE </li>
                   <li className={styles.genre}> DRUM & BASS </li>
                 </ul>
-                <ul className={styles.genreContainer}>
+                <ul className={styles.genreCol}>
                   <li className={styles.genre}> DUBSTEP </li>
                   <li className={styles.genre}> ELECTRO HOUSE </li>
                   <li className={styles.genre}> ELECTRONICA / DOWNTEMPO </li>
@@ -101,7 +101,7 @@ export default class GenreMenu extends Component {
                   <li className={styles.genre}> GARAGE / BASSLINE / GRIME </li>
                   <li className={styles.genre}> HARD DANCE </li>
                 </ul>
-                <ul className={styles.genreContainer}>
+                <ul className={styles.genreCol}>
                   <li className={styles.genre}> HARDCORE / HARD TECHNO </li>
                   <li className={styles.genre}> HIP-HOP / R&B </li>
                   <li className={styles.genre}> HOUSE </li>
@@ -111,7 +111,7 @@ export default class GenreMenu extends Component {
                   <li className={styles.genre}> MELODIC HOUSE & TECHNO </li>
                   <li className={styles.genre}> MINIMAL / DEEP TECH </li>
                 </ul>
-                <ul className={styles.genreContainer}>
+                <ul className={styles.genreCol}>
                   <li className={styles.genre}> PROGRESSIVE HOUSE </li>
                   <li className={styles.genre}> PSY-TRANCE </li>
                   <li className={styles.genre}> REGGAE / DANCEHALL / DUB </li>
