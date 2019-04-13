@@ -2,7 +2,7 @@
   position: absolute;
   height: auto;
   width: auto;
-  top: 52px;
+  top: 60px;
   display: inline-block;
   flex-wrap: wrap;
   flex-direction: column;
@@ -117,7 +117,7 @@ div.cartText:hover {
   display: block;
   border: 1px solid #373737;
   background-color: #191919;
-  right: -85px;
+  right: -98px;
   list-style-type: none;
 }
 

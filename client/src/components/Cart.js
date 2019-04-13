@@ -100,9 +100,9 @@ export default class Cart extends Component {
                 </div>
               </div>
 
-              {this.state.carts.map(cart => (
+              {this.state.carts.map((cart, i) => (
                 // console.log(cart);
-                <div className={styles.newCart}>
+                <div className={styles.newCart} key={i}>
                   <div className={styles.cartText}>
                     {cart}
                     <span className={styles.addSpace}>0</span>
