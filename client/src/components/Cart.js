@@ -17,7 +17,7 @@ export default class Cart extends Component {
       carts: props.carts,
       price: 0
     };
-    console.log(this.state.carts);
+    // console.log(this.state.carts);
     this.showCart = this.showCart.bind(this);
     this.hideCart = this.hideCart.bind(this);
     this.inputNewCart = this.inputNewCart.bind(this);
