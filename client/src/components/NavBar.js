@@ -119,7 +119,10 @@ export default class NavBar extends React.Component {
             <header className={styles.modalHeader}>
               <h2>
                 NEW CART{' '}
-                <span className="close" onClick={this.handleAddClick}>
+                <span
+                  className={styles.closeButton}
+                  onClick={this.handleAddClick}
+                >
                   &times;
                 </span>
               </h2>
@@ -138,8 +141,15 @@ export default class NavBar extends React.Component {
                   <input type="checkbox" />
                   Set as default cart
                 </p>
-                <button onClick={this.handleSave}>SAVE CHANGES</button>
-                <button onClick={this.handleAddClick}>CANCEL</button>
+                <button className={styles.saveButton} onClick={this.handleSave}>
+                  SAVE CHANGES
+                </button>
+                <button
+                  className={styles.cancelButton}
+                  onClick={this.handleAddClick}
+                >
+                  CANCEL
+                </button>
               </form>
             </div>
           </div>

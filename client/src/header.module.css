@@ -299,20 +299,19 @@ ul li.genre:hover {
   color: white;
   z-index: 4;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
   background-color: rgba(0, 0, 0, 0.4);
   /* font: 5px; */
 }
 
 .modalContent {
-  background-color: #262626;
+  background-color: #4d4d4d;
   margin: 15% auto;
   /* border: 1px solid #888; */
-  height: 40vh;
-  width: 45vw;
-  font: 13px;
+  height: 23vh;
+  width: 32.5vw;
   /* padding: 20px; */
   color: #8c8c8c;
   /* margin: 0; */
@@ -322,15 +321,78 @@ ul li.genre:hover {
   justify-content: space-between;
   background-color: #373737;
   box-sizing: border-box;
+  font-family: 'Oswald', Arial, sans-serif;
   font-size: 10px;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
   padding-left: 15px;
   vertical-align: baseline;
 }
 .modalForm {
-  padding: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: 'Core Sans E', Arial, sans-serif;
   box-sizing: border-box;
+  color: #8c8c8c;
+  /* margin-top: -10px; */
 }
 .modalInput {
-  /* margin-top: -100px; */
-  width: 425px;
+  /* margin-top: 0px; */
+  /* margin-bottom: 20px; */
+  height: 20px;
+  /* width: 270px; */
+  outline-color: #94d500;
+  /* outline: none; */
+  overflow: auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 590px;
+  /* padding: 0; */
+}
+
+.saveButton {
+  -webkit-appearance: none;
+  border-radius: 3px;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: CoreSans, Arial, sans-serif;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 13px;
+  color: #fff;
+  background: #ff53a0;
+  text-align: center;
+  transition: background 0.2s;
+  margin-right: 15px;
+}
+
+.cancelButton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: CoreSans, Arial, sans-serif;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 13px;
+  color: #fff;
+  background: #6c6c6c;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.closeButton {
+  position: absolute;
+  font-size: 30px;
+  margin-left: 580px;
+  margin-top: -30px;
 }
