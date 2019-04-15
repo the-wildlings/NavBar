@@ -15,8 +15,8 @@ export default class NavBar extends React.Component {
       search: '',
       modal: false,
       value: '',
-      carts: ['Test'],
-      itemInCart: props.mainCart
+      carts: []
+      // itemInCart: props.mainCart
     };
     this.handleAddClick = this.handleAddClick.bind(this);
     this.modalStay = this.modalStay.bind(this);
@@ -37,19 +37,24 @@ export default class NavBar extends React.Component {
     });
   }
   handleChange(e) {
+    e.preventDefault;
     this.setState({
       value: e.target.value
     });
   }
 
   handleSave(e) {
+    e.preventDefault;
     if (this.state.value.length) {
       let newCart = this.state.carts;
       newCart.push(this.state.value);
-      this.setState({
-        carts: newCart,
-        modal: !this.state.modal
-      });
+      this.setState(
+        {
+          carts: newCart,
+          modal: !this.state.modal
+        },
+        document.getElementById('newCartForm').reset()
+      );
     } else {
       this.setState({
         modal: !this.state.modal
@@ -57,12 +62,12 @@ export default class NavBar extends React.Component {
     }
   }
 
-  handleCartAdd(e) {
-    e.preventDefault;
-    this.setState({
-      itemInCart: adf
-    });
-  }
+  // handleCartAdd(e) {
+  //   e.preventDefault;
+  //   this.setState({
+  //     itemInCart: []
+  //   });
+  // }
 
   render() {
     let style = {
@@ -108,7 +113,7 @@ export default class NavBar extends React.Component {
               <Cart
                 handleAddClick={this.handleAddClick}
                 carts={this.state.carts}
-                handleCartAdd={this.handleCartAdd}
+                // handleCartAdd={this.handleCartAdd}
               />
               <div className={styles.cartPrice}>2 / $2.98</div>
             </a>
@@ -129,7 +134,7 @@ export default class NavBar extends React.Component {
             </header>
             <div className="contentContainer">
               {/* <p>NEW CART</p> */}
-              <form className={styles.modalForm}>
+              <form id="newCartForm" className={styles.modalForm}>
                 <p>NAME</p>
                 <p>
                   <input
@@ -141,15 +146,18 @@ export default class NavBar extends React.Component {
                   <input type="checkbox" />
                   Set as default cart
                 </p>
-                <button className={styles.saveButton} onClick={this.handleSave}>
+                <div
+                  className={styles.saveButton}
+                  onClick={e => this.handleSave(e)}
+                >
                   SAVE CHANGES
-                </button>
-                <button
+                </div>
+                <div
                   className={styles.cancelButton}
                   onClick={this.handleAddClick}
                 >
                   CANCEL
-                </button>
+                </div>
               </form>
             </div>
           </div>

@@ -78,6 +78,7 @@ div.cartText:hover {
 .artistAndLabels {
   border-bottom: 2px solid rgba(155, 155, 155, 0.2);
   padding-bottom: 6px;
+  padding-top: 6px;
 }
 
 .artist {
@@ -145,8 +146,19 @@ div.cartText:hover {
   margin-left: 5px;
   margin-bottom: -2px;
 }
+
 .quantity {
   color: #ff53a0;
+}
+
+.newCart {
+  padding-bottom: 10px;
+}
+.newCart > svg {
+  /* position: fixed; */
+  margin-right: 5px;
+  margin-left: 22px;
+  margin-bottom: -3px;
 }
 
 .headphoneMan {
@@ -168,8 +180,18 @@ div.cartText:hover {
 }
 
 .followingIcon {
-  width: 25px;
-  height: 25px;
-  fill: white;
+  position: absolute;
+  /* width: 30px;
+  height: 30px; */
+  fill: #ffff;
   /* stroke: white; */
+}
+
+.heart {
+  position: absolute;
+  /* z-index: 3; */
+  fill: #ffff;
+
+  /* height: 25px; */
+  /* width: 25px; */
 }

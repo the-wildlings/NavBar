@@ -9,7 +9,7 @@ const Settinglogo = props => {
       // xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       height="17"
-      width="17"
+      width="30"
       viewBox="0 0 70.021 70.021"
       // style="enable-background:new 0 0 52 52;"
       // xml:space="preserve"

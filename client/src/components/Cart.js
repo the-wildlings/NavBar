@@ -5,7 +5,6 @@ import FileCabs from './FileCabs.js';
 import Star from './Star.js';
 import Settinglogo from './Settinglogo.js';
 import ShoppingCart from './ShoppingCartSVG.js';
-import NewCart from './NewCart.js';
 export default class Cart extends Component {
   constructor(props) {
     super(props);
@@ -53,6 +52,7 @@ export default class Cart extends Component {
   }
 
   inputNewCart(e) {
+    e.preventDefault;
     let newCart = this.state.cart.push({ name: e.target.value });
     this.setState({
       cart: newCart
@@ -113,7 +113,7 @@ export default class Cart extends Component {
 
               {/* <NewCart /> */}
               <div
-                className={styles.cartText}
+                className={styles.newCart}
                 onClick={e => this.props.handleAddClick(e)}
               >
                 <PlusSign />

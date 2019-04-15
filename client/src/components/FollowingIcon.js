@@ -5,9 +5,9 @@ const FollowingIcon = props => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="40px"
-      height="25px"
-      viewBox="25 10 50 50"
+      width="35px"
+      height="37px"
+      viewBox="10 20 60 60"
       version="1.1"
     >
       <title>beatport</title>

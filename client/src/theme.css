@@ -5,6 +5,7 @@
   position: relative;
   float: left;
   margin-top: 8px;
+  /* overflow-x: hidden; */
 }
 .input {
   position: relative;
@@ -39,12 +40,13 @@
   /* justify-content: flex-start; */
   /* margin: 10px; */
   top: 15px;
-  right: 5px;
+  right: 155px;
   z-index: 2;
 }
 .suggestion {
   display: flex;
   align-items: center;
+  position: relative;
   width: 150px;
   height: 30px;
   padding-right: 80px;

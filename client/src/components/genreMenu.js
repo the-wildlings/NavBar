@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from '../header.module.css';
+import Arrow from './arrowImg.js';
 
 export default class GenreMenu extends Component {
   constructor(props) {
@@ -40,7 +41,10 @@ export default class GenreMenu extends Component {
         <div onMouseOver={this.showGenres}>
           <span className={styles.genreBox} />
           GENRES
-          <i className="fa fa-caret-down" />
+          {/* <i className="fa fa-caret-down" /> */}
+          <span>
+            <Arrow />
+          </span>
         </div>
         {this.state.showMenu ? (
           <div

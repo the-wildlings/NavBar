@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from '../user.module.css';
 import FollowingIcon from './FollowingIcon.js';
 import FilterArtist from './FilterArtist.js';
+import Heart from './heartImg.js';
 
 export default class Following extends Component {
   constructor(props) {
@@ -45,6 +46,9 @@ export default class Following extends Component {
           <div className={styles.followingIcon}>
             <FollowingIcon />
           </div>
+          <span>
+            <Heart className={styles.heart} />
+          </span>
           <div className={styles.userBox} />
         </div>
 
