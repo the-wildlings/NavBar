@@ -9,8 +9,8 @@ const Arrow = props => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      height="15px"
-      width="20px"
+      height="11px"
+      width="18px"
       viewBox="-400 -450 1000.076 1000.076"
       preserveAspectRatio="none"
     >
