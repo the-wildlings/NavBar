@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from '../user.module.css';
-import { userInfo } from 'os';
+// import { userInfo } from 'os';
 import HeadphoneMan from './HeadphoneMan.js';
 
 export default class AccountLogin extends Component {

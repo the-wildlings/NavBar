@@ -5,6 +5,7 @@ import FileCabs from './FileCabs.js';
 import Star from './Star.js';
 import Settinglogo from './Settinglogo.js';
 import ShoppingCart from './ShoppingCartSVG.js';
+
 export default class Cart extends Component {
   constructor(props) {
     super(props);
@@ -125,9 +126,4 @@ export default class Cart extends Component {
       </div>
     );
   }
-}
-// export default AccountLogin;
-
-{
-  /* <div>Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
 }

@@ -14,11 +14,7 @@
   height: 30px;
   background: #262626;
   margin-right: 150px;
-  /* margin-top: 8px; */
-  /* margin-bottom: 0px; */
   border: none;
-  /* vertical-align: baseline; */
-  /* float: left; */
   top: -5px;
   padding-left: 35px;
   padding-top: 10px;
@@ -34,11 +30,6 @@
 }
 .suggestionsContainer {
   position: absolute;
-  /* width: auto;
-  height: auto; */
-  /* display: flex; */
-  /* justify-content: flex-start; */
-  /* margin: 10px; */
   top: 15px;
   right: 155px;
   z-index: 2;
@@ -68,7 +59,6 @@
 }
 .icon {
   position: absolute;
-  /* top: 13px; */
   left: 10px;
   width: 10px;
   height: 10px;
