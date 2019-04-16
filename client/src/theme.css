@@ -49,6 +49,8 @@
   list-style-type: none;
   font-size: 13px;
   font-weight: none;
+  flex-wrap: none;
+  overflow: hidden;
 }
 .suggestionHighlighted {
   background-color: black;
