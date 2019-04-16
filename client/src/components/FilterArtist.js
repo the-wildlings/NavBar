@@ -21,7 +21,7 @@ class Filter extends React.Component {
   }
   fetch() {
     axios
-      .get(`/api`)
+      .get(`http://18.218.143.3:3001/api`)
       .then(response => {
         let artist = [];
         let label = [];
