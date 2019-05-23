@@ -80,43 +80,33 @@ export default class NavBar extends React.Component {
             {/* beatport */}
             <img src={require('../img/Beatport-logo.svg')} />
           </div>
-          <a href="genre" className={styles.tabs}>
+          <div className={styles.tabs}>
             {/* GENRES */}
             <GenreMenu />
-          </a>
-          <a href="tracks" className={styles.tabs}>
-            TRACKS
-          </a>
-          <a href="releases" className={styles.tabs}>
-            RELEASES
-          </a>
-          <a href="charts" className={styles.tabs}>
-            CHARTS
-          </a>
-          <a href="stems" className={styles.tabs}>
-            STEMS
-          </a>
-          <a href="sounds" className={styles.tabs}>
-            SOUNDS
-          </a>
+          </div>
+          <div className={styles.tabs}>TRACKS</div>
+          <div className={styles.tabs}>RELEASES</div>
+          <div className={styles.tabs}>CHARTS</div>
+          <div className={styles.tabs}>STEMS</div>
+          <div className={styles.tabs}>SOUNDS</div>
           {/* <img src={}/> */}
           <div className="searchIcon" />
           <Search id="searchBar" />
           <div className={styles.userContainer}>
-            <a href="account" className={styles.userTabs}>
+            <div className={styles.userTabs}>
               <AccountLogin />
-            </a>
-            <a /*href="following"*/ className={styles.userTabs}>
+            </div>
+            <div /*href="following"*/ className={styles.userTabs}>
               <Following />
-            </a>
-            <a /*href="cart"*/ className={styles.userCart}>
+            </div>
+            <div /*href="cart"*/ className={styles.userCart}>
               <Cart
                 handleAddClick={this.handleAddClick}
                 carts={this.state.carts}
                 // handleCartAdd={this.handleCartAdd}
               />
               <div className={styles.cartPrice}>2 / $2.98</div>
-            </a>
+            </div>
           </div>
         </div>
         <div style={style} className={styles.newCartPopUp}>
