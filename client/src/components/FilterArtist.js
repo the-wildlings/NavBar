@@ -86,7 +86,9 @@ class Filter extends React.Component {
         </div>
         <div className={styles.artist}>
           {this.state.db.map((artist, i) => (
-            <div key={i}>{artist}</div>
+            <div className={styles.following} key={i}>
+              {artist}
+            </div>
           ))}
         </div>
         <div className={styles.artistAndLabels}>
@@ -95,7 +97,9 @@ class Filter extends React.Component {
         </div>
         <div className={styles.artist}>
           {this.state.label.map((label, i) => (
-            <div key={i}>{label}</div>
+            <div className={styles.following} key={i}>
+              {label}
+            </div>
           ))}
         </div>
       </div>
