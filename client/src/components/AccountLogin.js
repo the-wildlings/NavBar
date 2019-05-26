@@ -40,15 +40,16 @@ export default class AccountLogin extends Component {
   render() {
     return (
       <div onMouseOver={this.showAccount}>
-        <div className={styles.headphoneMan}>
+        <div>
           {/* Account */}
-          {/* <img
-            width="20"
-            height="20"
-            className={styles.man}
-            src={require('../img/headphoneman.png')}
-          /> */}
-          <HeadphoneMan />
+          <img
+            // width="40"
+            // height="40"
+            // borderRadius="10"
+            className={styles.headphoneMan}
+            src={require('../img/Beatport-headphoneman.jpg')}
+          />
+          {/* <HeadphoneMan /> */}
         </div>
         <div className={styles.userBox} />
         {this.state.showAccount ? (

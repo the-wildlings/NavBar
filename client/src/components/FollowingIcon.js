@@ -7,8 +7,11 @@ const FollowingIcon = props => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="35px"
       height="37px"
-      viewBox="10 20 60 60"
-      version="1.1"
+      viewBox="17 18 60 60"
+      preserveAspectRatio="none"
+      overflow="visible"
+
+      // version="1.1"
     >
       <title>beatport</title>
       <g

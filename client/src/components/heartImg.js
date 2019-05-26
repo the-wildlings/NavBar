@@ -11,7 +11,7 @@ const Heart = () => {
       y="0px"
       height="18px"
       width="21px"
-      viewBox="-40.5 -40 90.997 90.997"
+      viewBox="-22 -35 90.997 90.997"
       preserveAspectRatio="none"
     >
       <path
