@@ -73,7 +73,7 @@ div.cartText:hover {
 .artistAndLabels {
   border-bottom: 2px solid rgba(155, 155, 155, 0.2);
   padding-bottom: 6px;
-  padding-top: 6px;
+  padding-top: 15px;
 }
 
 .artist {
@@ -89,6 +89,7 @@ div.following:hover {
 }
 .viewMyBeatPort {
   width: 300px;
+  font-size: 15px;
   padding: 12px 15px;
   margin: 5px;
   box-sizing: border-box;

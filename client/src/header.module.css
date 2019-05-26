@@ -194,6 +194,18 @@ div.userCart:hover > div.cartPrice {
   border-bottom: 1px solid rgba(155, 155, 155, 0.2);
 }
 
+@media screen and (max-width: 1380px) {
+  .genre {
+    width: 20vw;
+  }
+  .description {
+    width: 20vw;
+  }
+  .genreMenu {
+    left: -220px;
+  }
+}
+
 ul li.genre:hover {
   color: #94d500;
 }
