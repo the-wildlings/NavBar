@@ -16,7 +16,7 @@ AirBnBeats is a replica of beatport.com using React, Node/Express, and Mongo/Mon
 1. run npm build
 2. run npm seed
 3. npm start
-4. Go to localhost:3737
+4. Go to localhost:3001
 
 ## Requirements
 
